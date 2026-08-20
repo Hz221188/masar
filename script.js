@@ -1,7 +1,7 @@
 function toggleAbout() {
-  const header = document.querySelector('.about-header');
+  const btn = document.querySelector('.about-toggle');
   const content = document.querySelector('.about-content');
 
-  header.classList.toggle('active');
-  content.classList.toggle('show');
+  btn.classList.toggle('active');
+  content.classList.toggle('open');
 }
