@@ -64,4 +64,49 @@ body {
   transform: rotate(180deg);
 }
 
+.about {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  margin: 40px 0;
+  overflow: hidden;
+}
+
+.about-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 18px 20px;
+  font-size: 20px;
+  color: var(--dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.about-toggle .arrow {
+  transition: transform 0.3s ease;
+  font-size: 18px;
+}
+
+.about-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  transition: max-height 0.4s ease;
+}
+
+.about-content.open {
+  max-height: 300px;
+  padding: 15px 20px 25px;
+}
+
+.about-toggle.active .arrow {
+  transform: rotate(180deg);
+}
+
+
 /* باقي التنسيقات الأصلية تبقى كما هي */
