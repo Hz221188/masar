@@ -6,8 +6,6 @@
   --card-bg: #ffffff;
   --text-main: #334155;
   --text-muted: #64748b;
-  --gold: #d4af37;
-  --gold-light: #e8d5b7;
 }
 
 * {
@@ -32,31 +30,10 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-@keyframes goldGlow {
-  0% {
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3), 
-                inset 0 0 20px rgba(212, 175, 55, 0.1),
-                0 10px 30px rgba(0, 0, 0, 0.15);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.5), 
-                inset 0 0 30px rgba(212, 175, 55, 0.15),
-                0 15px 40px rgba(0, 0, 0, 0.2);
-  }
-  100% {
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3), 
-                inset 0 0 20px rgba(212, 175, 55, 0.1),
-                0 10px 30px rgba(0, 0, 0, 0.15);
-  }
-}
-
 /* إيقاف الحركة لمن يفضلون ذلك */
 @media (prefers-reduced-motion: reduce) {
   body {
     animation: none;
-  }
-  .seo-content {
-    animation: none !important;
   }
 }
 
@@ -118,79 +95,22 @@ header {
 }
 
 .seo-content {
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #ffffff 100%);
-  padding: 40px;
-  border-radius: 20px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
   margin: 30px 0;
-  border: 2px solid var(--gold);
-  position: relative;
-  overflow: hidden;
-  animation: goldGlow 4s ease-in-out infinite;
-  transition: all 0.3s ease;
-}
-
-/* طبقة تزيينية داخلية */
-.seo-content::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: 
-    linear-gradient(45deg, transparent 30%, rgba(212, 175, 55, 0.05) 50%, transparent 70%);
-  pointer-events: none;
-  border-radius: 18px;
-}
-
-/* زوايا ذهبية فاخرة */
-.seo-content::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100px;
-  height: 100px;
-  background: 
-    radial-gradient(circle at top right, rgba(212, 175, 55, 0.15), transparent);
-  border-radius: 50%;
-  pointer-events: none;
+  border: 1px solid #e2e8f0;
 }
 
 .seo-content h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
+  font-size: 22px;
+  margin-bottom: 15px;
   color: var(--dark);
-  background: linear-gradient(135deg, var(--dark), var(--primary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.seo-content h2::before {
-  content: '✦';
-  color: var(--gold);
-  font-size: 24px;
 }
 
 .seo-content p {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: var(--text-main);
-  font-size: 16px;
-  line-height: 1.8;
-  position: relative;
-  z-index: 1;
-}
-
-.seo-content:hover {
-  transform: translateY(-3px);
-  border-color: rgba(212, 175, 55, 0.8);
 }
 
 .services {
