@@ -1,0 +1,67 @@
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --dark: #0f172a;
+  --light-bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #334155;
+  --text-muted: #64748b;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
+  background-size: 300% 300%;
+  animation: royalGlow 12s ease infinite;
+  color: var(--text-main);
+  line-height: 1.6;
+  direction: rtl;
+}
+
+@keyframes royalGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* قسم من نحن */
+.about {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 40px 0;
+}
+
+.about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.about-header h2 {
+  font-size: 22px;
+  color: var(--dark);
+}
+
+.about-header .arrow {
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+.about-content {
+  margin-top: 15px;
+  display: none;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.about-content.show {
+  display: block;
+}
+
+.about-header.active .arrow {
+  transform: rotate(180deg);
+}
+
+/* باقي التنسيقات الأصلية تبقى كما هي */
