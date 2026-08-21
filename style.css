@@ -1,0 +1,337 @@
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --dark: #0f172a;
+  --light-bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #334155;
+  --text-muted: #64748b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Tajawal', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #d7d7d7, #cfcfcf, #e5e5e5);
+  background-size: 400% 400%;
+  animation: silverGlow 12s ease infinite;
+  color: var(--text-main);
+  line-height: 1.6;
+  direction: rtl;
+}
+
+@keyframes silverGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* إيقاف الحركة لمن يفضلون ذلك */
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+header {
+  background: var(--card-bg);
+  border-bottom: 1px solid #e2e8f0;
+  padding: 15px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 85px;
+  width: auto;
+  object-fit: contain;
+}
+
+.btn-main {
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn-main:hover {
+  background: var(--primary-dark);
+}
+
+.hero {
+  padding: 50px 0 30px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 30px;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 17px;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.seo-content {
+  padding: 25px;
+  border-radius: 12px;
+  margin: 30px 0;
+  border: 1px solid #e2e8f0;
+  background: rgb(236, 236, 236);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.seo-content h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: var(--dark);
+}
+
+.seo-content p {
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+
+.services {
+  padding: 30px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 25px;
+  color: var(--dark);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 25px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border: 1px solid #03070b;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.card a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.app-banner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  padding: 40px 20px;
+  border-radius: 16px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.badge-tag {
+  display: inline-block;
+  background-color: rgba(37, 99, 235, 0.2);
+  color: #60a5fa;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.masar-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin-top: 12px;
+}
+
+.masar-logo-item img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  opacity: 0.95;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.masar-logo-item img:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.faq {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin: 40px 0;
+}
+
+.faq h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: var(--dark);
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+
+.faq-item p {
+  color: var(--text-muted);
+}
+
+footer {
+  text-align: center;
+  padding: 25px 0;
+  border-top: 1px solid #e2e8f0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.social-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.social-links a {
+  font-size: 24px;
+  color: var(--primary);
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--primary-dark);
+  transform: scale(1.15);
+}
+
+.whatsapp-float,
+.call-float {
+  position: fixed;
+  bottom: 22px;
+  width: 58px;
+  height: 58px;
+  z-index: 9999;
+}
+
+.whatsapp-float {
+  right: 22px;
+}
+
+.call-float {
+  left: 22px;
+}
+
+.whatsapp-float img,
+.call-float img {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: 0.3s ease;
+}
+
+.whatsapp-float img:hover,
+.call-float img:hover {
+  transform: scale(1.12);
+}
+
+/* حاوي لضبط العناصر في منتصف الشاشة */
+.center-container {
+  display: flex;
+  justify-content: center; /* توسيط أفقي */
+  align-items: center;     /* توسيط عمودي */
+}
+
+/* تنسيق الزر نفسه */
+.my-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+  border-radius: 30px;
+  border: 1px solid #8F9092;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #606060;
+  text-shadow: 0 1px #fff;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.my-button:hover {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+}
+
+.my-button:active, .my-button:focus {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+
