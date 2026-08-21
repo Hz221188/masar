@@ -95,14 +95,16 @@ header {
 }
 
 .seo-content {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  margin: 30px 0;
-    border: 5px solid #3a3a3a; /* إطار رمادي داكن */
-  border-radius: 8px;        /* اختياري */
-
+  max-height: 140px;      /* يظهر جزء فقط */
+  overflow: hidden;       /* يخفي الباقي */
+  transition: max-height 0.4s ease;
 }
+
+/* عند الفتح */
+.seo-content.expanded {
+  max-height: 1000px;     /* ارتفاع كبير يكفي المحتوى */
+}
+
 
 .services {
   padding: 30px 0;
