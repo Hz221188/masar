@@ -2,6 +2,14 @@ function toggleAbout() {
   const btn = document.querySelector('.about-toggle');
   const content = document.querySelector('.about-content');
 
-  btn.classList.toggle('active');
-  content.classList.toggle('open');
-}
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const title = document.querySelector(".seo-content-title"); // h2
+  const content = document.querySelector(".seo-content");
+
+  title.addEventListener("click", function () {
+    content.classList.toggle("expanded");
+  });
+});
+</script>
+
