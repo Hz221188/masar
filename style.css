@@ -30,12 +30,6 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* إيقاف الحركة لمن يفضلون ذلك */
-@media (prefers-reduced-motion: reduce) {
-  body {
-    animation: none;
-  }
-}
 
 .container {
   max-width: 1000px;
